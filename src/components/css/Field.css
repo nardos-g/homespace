@@ -1,3 +1,16 @@
 input {
+  border: 2px solid rgba(41, 233, 37, 0.38);
+  padding: 0.1em 2em;
+  border-radius: 15px;
+  background: rgba(222, 222, 222, 0.5);
+
+  height: 30px;
+}
+input:focus-visible {
+  border: none;
   outline: 2px solid rgba(41, 233, 37, 0.38);
+}
+
+.field {
+  margin: 1em;
 }

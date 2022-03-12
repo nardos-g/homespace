@@ -1,0 +1,72 @@
+.signup {
+  width: fit-content;
+  margin: 0.3em auto;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+.signup > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.095em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+
+  color: #000000;
+}
+
+.card {
+  width: 600px;
+  height: 457px;
+  margin: 0.2em auto;
+  text-align: center;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(196, 196, 196, 0.53);
+  background: #ffffff;
+}
+
+form {
+  width: fit-content;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.terms > input {
+  width: 27px;
+  height: 27px;
+  margin: 0em 1em;
+}
+.terms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.terms > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.095em;
+
+  color: #000000;
+
+  opacity: 0.55;
+  border: 1px solid rgba(41, 233, 37, 0.38);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.095em;
+
+  color: #000000;
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import './css/Field.css';
+import './css/Field.css'
 
-export const Field = ({ placeholder, kind }) => {
+export const Field = ({className, text, kind }) => {
     return (
-        <input type= {kind} size={25} placeholder = {placeholder}/>
+        <input className={className} type= {kind} size={25} placeholder = {text} autoComplete = "true"/>
     )
 }
