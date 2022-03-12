@@ -3,6 +3,6 @@ import './css/Button.css';
 
 export const Button = ({ color, text, bgColor }) => {
     return (
-        <input className="Btn" style={{color: {color}, backgroundColor: {bgColor}}} type="button" value={text}/>
+        <input className="Btn" style={{color: {color}, backgroundColor: {bgColor}}} type="submit" value={text}/>
     )
 }

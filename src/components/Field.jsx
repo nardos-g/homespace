@@ -1,8 +1,11 @@
 import React from "react";
 import './css/Field.css'
 
-export const Field = ({className, text, kind }) => {
+export const Field = ({text, kind, onChange, value}) => {
+    const activate = (e) => {
+        onChange(e, text);
+    }
     return (
-        <input className={className} type= {kind} size={25} placeholder = {text} autoComplete = "true"/>
+        <input value={value} onChange={activate} className='field' type= {kind} size={25} placeholder = {text} autoComplete = "true"/>
     )
 }
