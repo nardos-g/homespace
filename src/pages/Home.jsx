@@ -3,7 +3,10 @@ import Navbar from '../components/Navbar'
 
 function Home() {
   return (
-    <Navbar/>
+    <div className="check">
+      <Navbar/>
+      <Navbar/>
+    </div>
   )
 }
 
