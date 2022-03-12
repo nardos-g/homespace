@@ -30,6 +30,10 @@ export const Signin = () => {
     const submit = (e) => {
         e.preventDefault();
 
+        if(e.target[4].checked === false){
+            alert('<h2>You should agree to our terms to proceed!</h2>')
+            return
+        }
         if (password === confPassword){
             createUserWithEmailAndPassword(auth, email, password)
             .then(res => {
@@ -38,7 +42,9 @@ export const Signin = () => {
                 addDoc(docRef, {
                     name: name,
                     email: email,
-                }).then(res => console.log('Added to database!!'))
+                }).then(res => {
+                    setName(''); setEmail('');setPassword('');setConfPassword('');
+                })
                 .catch(reason => console.log(reason.message))
             })
             .catch(reason => console.log(reason.message))
