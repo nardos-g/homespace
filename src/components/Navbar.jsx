@@ -1,5 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     const handleClick=()=>{
@@ -13,7 +14,7 @@ function Navbar() {
       <div className="container">
         <h1 className="logo">DJK</h1>
         <ul className="nav">
-            <Link to='/'>Home</Link>   
+            <Link to='/signin'> Sign Up</Link>   
           
         </ul>
       </div>
