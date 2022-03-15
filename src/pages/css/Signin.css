@@ -20,7 +20,7 @@ a {
   color: #000000;
 }
 
-.card {
+.signup__card {
   width: 600px;
   height: 457px;
   margin: 0.2em auto;
@@ -31,25 +31,25 @@ a {
   background: #ffffff;
 }
 
-form {
+.signup__form {
   width: fit-content;
   margin: 3em auto;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-.terms > input {
+.signup__terms > input {
   width: 27px;
   height: 27px;
   margin: 0em 1em;
 }
-.terms {
+.signup__terms {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.terms > p {
+.signup__terms > p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;

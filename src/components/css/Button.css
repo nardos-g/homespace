@@ -1,4 +1,9 @@
 .Btn {
   font-size: medium;
   font-weight: bolder;
+  width: fit-content;
+
+  padding: 0.5em 2em;
+  border: 1px solid white;
+  border-radius: 10px;
 }

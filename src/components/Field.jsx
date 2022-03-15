@@ -1,11 +1,15 @@
 import React from "react";
+import {  } from 'react-icons/fa'
 import './css/Field.css'
 
-export const Field = ({text, kind, onChange, value}) => {
+export const Field = ({icon, className, text, kind, onChange, value}) => {
     const activate = (e) => {
         onChange(e, text);
     }
     return (
-        <input value={value} onChange={activate} className='field' type= {kind} size={25} placeholder = {text} autoComplete = "true"/>
+        <div className="Field__wrapper">
+            <input value={value} onChange={activate} className={`Field__input ${className}`} type= {kind} placeholder = {text} autoComplete = "true"/>
+            <span className="Field__icon">{icon}</span>
+        </div>
     )
 }

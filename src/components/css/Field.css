@@ -1,4 +1,4 @@
-input {
+.Field__input {
   border: 2px solid rgba(41, 233, 37, 0.38);
   padding: 0.1em 2em;
   border-radius: 15px;
@@ -6,11 +6,17 @@ input {
 
   height: 30px;
 }
-input:focus-visible {
+.Field__input:focus-visible {
   border: none;
   outline: 2px solid rgba(41, 233, 37, 0.38);
 }
 
-.field {
+.Field__input {
   margin: 1em;
+}
+.Field__wrapper {
+  position: relative;
+}
+.Field__icon {
+  position: absolute;
 }

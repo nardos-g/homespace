@@ -3,6 +3,7 @@ import { Field } from "../components/Field";
 import { Button } from "../components/Button";
 import { auth } from "../firebase.config";
 import { db } from "../firebase.config";
+import { FaPlus } from 'react-icons/fa'
 import { collection, addDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import './css/Signin.css';
@@ -56,17 +57,17 @@ export const Signin = () => {
         <>
         <div className="signup">
             <p>CREATE AN ACCOUNT</p>
-            <div className="card">
-                <form onSubmit={submit} action="">
-                        <Field onChange = {record} value = {name} id = 'userName' kind='text' text = 'Name'/>
+            <div className="signup__card">
+                <form className="signup__form" onSubmit={submit} action="">
+                        <Field icon={FaPlus} onChange = {record} value = {name} id = 'userName' kind='text' text = 'Name'/>
                         <Field onChange = {record} value = {email} id = 'userEmail' kind='email' text = 'Email'/>
                         <Field onChange = {record} value = {password} id = 'userPassword' kind='password' text = 'Password'/>
                         <Field onChange = {record} value = {confPassword} id = 'userPasswordConf' kind='password' text = 'Confirm Password'/>
-                        <div className="terms">
+                        <div className="signup__terms">
                             <input name="termsbox" type="checkbox" value='true'/>
                             <p>I agree to all <a href="#">terms</a> & <a href="#">conditions</a></p>
                         </div>
-                        <Button color='white' bgColor="blue" text={'Sign Up'} />
+                        <Button tcolor='white' bgColor="blue" text={'Sign Up'} />
                 </form>
             </div>
         </div>
