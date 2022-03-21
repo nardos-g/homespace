@@ -1,8 +1,8 @@
 import React from "react";
-import {  } from 'react-icons/fa'
-import './css/Field.css'
+import './css/Field.css';
 
 export const Field = ({icon, className, text, kind, onChange, value}) => {
+    
     const activate = (e) => {
         onChange(e, text);
     }
