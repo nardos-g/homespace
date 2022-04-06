@@ -1,0 +1,63 @@
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.pad-y {
+  font-weight: bolder;
+}
+.bold {
+  font-weight: bolder;
+  font-size: larger;
+  color: white;
+}
+.height {
+  line-height: 10px;
+  margin-left: 20%;
+  margin-top: 30px;
+  width: fit-content;
+  box-shadow: 2 2 5 2 black;
+}
+
+main {
+  background-color: rgba(223, 4, 4, 0.76);
+  padding: 10px;
+  margin-top: 15px;
+  width: 80%;
+  margin-left: auto;
+  display: none;
+}
+#menu:hover + main,
+main:hover {
+  display: block;
+}
+#menu:hover {
+  cursor: pointer;
+}
+.mt {
+  margin-top: 30px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.px {
+  padding: 0px 20px;
+  color: white;
+}
+
+.conect {
+  background-color: blue;
+  height: 100px;
+  width: 50px;
+  margin-top: -80px;
+  margin-left: 0px;
+}

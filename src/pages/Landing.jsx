@@ -4,8 +4,12 @@ import {Field} from '../components/Field';
 import {FaArrowRight,
     FaSearch, FaStar} from 'react-icons/fa';
 import './css/landing.css';
+import { Testimony } from "../components/testimony";
+import { Card } from "../components/card";
+import {faker} from '@faker-js/faker';
 
 export const Landing = () => {
+
     return(
         <div className="bg pt-12">
             <div className="w-4/5 mx-auto mt-0">
@@ -27,7 +31,7 @@ export const Landing = () => {
                 <div>
                     <div>
                         <div>
-                            <h1 className="font-bold text-3xl mb-4 hpl">Rent, Sale, And buy <br /> with Ease!</h1>
+                            <h1 className="font-bold text-3xl mb-4 hpl">ቤትዎን ያከራዩ፡ Sale, And buy <br /> with Ease!</h1>
                             <p>Far far away, behind the word mountains, far from the countries
                                     Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
@@ -145,72 +149,19 @@ export const Landing = () => {
                 <section className="mt-4">
                 <h2 className="font-semibold text-xl mb-12 mt-6 w-fit mx-auto">Feaured Listings</h2>
                     <div className="flex flex-wrap justify-center">
-                        <div className="flex-col text-sm mx-4 mb-8">
-                            <div>
-                                <img src="#" alt="" className="h-52 w-52 rounded-xl bg-slate-900"/>
-                            </div>
-                            <div className="flex-col">
-                                <h4 className="">Single Room</h4>
-                                <div className="flex justify-between">
-                                    <p>Bole</p>
-                                    <p>Furnished</p>
-                                </div>
-                                <span>2000 birr/month</span>
-                            </div>
-                        </div>
-                        <div className="flex-col text-sm mx-4 mb-8">
-                            <div>
-                                <img src="#" alt="" className="h-52 w-52 rounded-xl bg-slate-900"/>
-                            </div>
-                            <div className="flex-col">
-                                <h4>Two Bedroom Condo</h4>
-                                <div className="flex justify-between">
-                                    <span>CMC</span>
-                                    <span>Furnished</span>
-                                </div>
-                                <p>6000 birr/month</p>
-                            </div>
-                        </div>
-                        <div className="flex-col text-sm mx-4 mb-8">
-                            <div>
-                                <img src="#" alt="" className="h-52 w-52 rounded-xl bg-slate-900"/>
-                            </div>
-                            <div className="flex-col">
-                                <h4>Full Compound, G+3</h4>
-                                <div className="flex justify-between">
-                                    <p>Alem Bank</p>
-                                    <p>Furnished</p>
-                                </div>
-                                <p>20,000 birr/month</p>
-                            </div>
-                        </div>
-                        <div className="flex-col text-sm mx-4 mb-8">
-                            <div>
-                                <img src="#" alt="" className="h-52 w-52 rounded-xl bg-slate-900"/>
-                            </div>
-                            <div className="flex-col">
-                                <h4>Single Room</h4>
-                                <div className="flex justify-between">
-                                    <p>Location</p>
-                                    <p>Furnished</p>
-                                </div>
-                                <p>2000 birr/month</p>
-                            </div>
-                        </div>
-                        <div className="flex-col text-sm mx-4 mb-8">
-                            <div>
-                                <img src="#" alt="" className="h-52 w-52 rounded-xl bg-slate-900"/>
-                            </div>
-                            <div className="flex-col">
-                                <h4>Single Room</h4>
-                                <div className="flex justify-between">
-                                    <p>Location</p>
-                                    <p>Furnished</p>
-                                </div>
-                                <p>2000 birr/month</p>
-                            </div>
-                        </div>
-            
+                        {() => {
+                            let file = faker.image.city()
+                            return <Card imageUrl={file}/>
+                        }}
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
                     </div>
                 </section>
             </div>
@@ -219,109 +170,10 @@ export const Landing = () => {
                     <div>
                         <h2 className="font-semibold text-xl my-4 w-fit mx-auto">What do our clients say!</h2>
                         <div  className = "flex justify-center">
-                            <div className="flex flex-col w-1/5 mx-4 px-4 pt-4 shadow-md bg-gray-100 rounded-lg justify-between">
-                                <div>
-                                    <div className="text-xl tracking-widest flex mb-4">
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/>
-                                    </div>
-                                    <div>
-                                        <p>
-                                            exercitationem laborum sequi autem maxime consequatur.
-                                            Saepe recusandae cum sunt, dolorem optio est
-                                            expedita fugit dignissimos totam inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex pb-2 items-center">
-                                    {/* Your profile shows should
-                                    be consistent accross the pages. */}
-                                    <div>
-                                        <img src="#" alt="" className="w-12 h-12 rounded-full bg-orange-300 mr-4"/>
-                                    </div>
-                                    <div>
-                                        <p>Name</p>
-                                        <p>Job</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className = "flex flex-col w-1/5 mx-4 px-4 py-4 shadow-md bg-gray-100 rounded-lg justify-between">
-                                <div className="text-xl tracking-widest flex mb-4">
-                                    <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                    <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                    <FaStar color="lightgray"/>
-                                </div>
-                                <div>
-                                <p>cum ullam temporibus minus dolores, rerum iusto aliquam exercitationem
-                                    laborum sequi autem maxime consequatur. Saepe recusandae cum sunt,
-                                    dolorem optio est expedita fugit dignissimos totam inventore!
-                                </p>
-            
-                                </div>
-                                <div className="flex pt-2">
-                                    {/* Your profile shows should
-                                    be consistent accross the pages. */}
-                                    <div>
-                                        <img src="#" alt="" className="w-12 h-12 rounded-full bg-orange-300 mr-4"/>
-                                    </div>
-                                    <div>
-                                        <p>Name</p>
-                                        <p>Job</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className = "flex flex-col w-1/5 mx-4  px-4 py-4 shadow-md bg-gray-100 rounded-lg justify-between">
-                                <div>
-                                    <div className="text-xl tracking-widest flex mb-4">
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/>
-                                    </div>
-                                    <div>
-                                    <p>laborum sequi autem maxime consequatur. Saepe recusandae cum sunt, dolorem
-                                        optio est expedita fugit dignissimos totam inventore!
-                                    </p>
-                                    </div>
-                                </div>
-                                <div className="flex pt-2">
-                                    {/* Your profile shows should
-                                    be consistent accross the pages. */}
-                                    <div>
-                                        <img src="#" alt="" className="w-12 h-12 rounded-full bg-orange-300 mr-4"/>
-                                    </div>
-                                    <div>
-                                        <p>Name</p>
-                                        <p>Job</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className = "flex justify-between flex-col w-1/5 mx-4 px-4 py-4 shadow-md bg-gray-100 rounded-lg">
-                                <div>
-                                    <div className="text-xl tracking-widest flex mb-4">
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/><FaStar color="lightgray"/>
-                                        <FaStar color="lightgray"/>
-                                    </div>
-                                    <div>
-                                        <p>rerum iusto aliquam exercitationem laborum sequi autem maxime consequatur.
-                                            Saepe recusandae cum sunt, dolorem optio est
-                                            expedita fugit dignissimos totam inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex pt-2">
-                                    {/* Your profile shows should
-                                    be consistent accross the pages. */}
-                                    <div >
-                                        <img src="#" alt="" className="w-12 h-12 rounded-full bg-orange-300 mr-4"/>
-                                    </div>
-                                    <div>
-                                        <p>Name</p>
-                                        <p>Job</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <Testimony />
+                            <Testimony />
+                            <Testimony />
+                            <Testimony />
                         </div>
                     </div>
                 </section>

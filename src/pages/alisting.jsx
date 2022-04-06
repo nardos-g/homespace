@@ -1,12 +1,27 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Field } from "../components/Field";
+import { ref, uploadBytes } from "firebase/storage";
+import { storage } from "../firebase.config";
 
 export const Alist = () => {
+    const fire = (e) => {
+        e.preventDefault();
+
+        const imgRef = ref(storage, "images/nardos.jpg")
+        console.log(e.target[12].files)
+        const file = e.target[12].files
+        uploadBytes(imgRef, file[0]).then((res) => {
+            console.log("I think I have successfully Uploaded an image");
+        }).catch((message) => {
+            console.log(message);
+        })
+    }
+
     return(
-        <div className="w-fit mx-auto mt-6">
+        <div className="w-1/2 mx-auto mt-6">
             <h2 className="font-semibold text-lg my-4 w-fit mx-auto">List your house for rent or sale here</h2>
-            <form action="">
+            <form action="" onSubmit={fire}>
                 <div className="flex ">
                     <div>
                         <label htmlFor="">NAME OF LISTING</label>
@@ -35,14 +50,15 @@ export const Alist = () => {
                         <span><input type="radio" name="house-type" />Single Room</span>
                     </div>
                 </div>
+
                 <div className="flex justify-between mt-8">
                     <div className="flex flex-col">
                         <label htmlFor="">BED ROOMS</label>
-                        <input type="number" defaultValue="0"/>
+                        <input className="border-2 border-l-purple-600" placeholder="How many bedrooms?" type="number" defaultValue="0"/>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">BED ROOMS</label>
-                        <input type="number" defaultValue="0"/>
+                        <input className="border-2 border-l-purple-600" type="number" defaultValue="0"/>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Furnished</label>
@@ -56,16 +72,17 @@ export const Alist = () => {
                 <div className="flex flex-col mt-8">
                     <h2>PHOTOS</h2>
                     <div className="flex justify-between mt-4">
-                        <Button text="Add Photos" bgColor="lightblue"/>
+                        <input type="file"  name="images"/>
                         <div className="flex flex-col">
                             <label htmlFor="">Add photos using the button or drag
                             and drop in the box (Max 6 photos allowed)</label>
-                            <div className="h-28 w-28 border-2 border-red-600">
+                            <div className="h-28 w-28 border-2 border-l-purple-600">
                                 <p>Drag and drop your pictures here</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div>
                     <h2>CONTACTS</h2>
                     <div className="flex">
@@ -77,7 +94,7 @@ export const Alist = () => {
                 </div>
                 <div>
                     <h2>DESCRIPTION</h2>
-                    <textarea name="" id="" cols="80" rows="10"></textarea>
+                    <textarea className="border-2 border-l-purple-600" name="" id="" cols="80" rows="10"></textarea>
                 </div>
                 <div className="flex">
                     <div className="flex items-center">

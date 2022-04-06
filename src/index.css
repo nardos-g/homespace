@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.width {
+  width: 90%;
+}
+
 @tailwind utilities;

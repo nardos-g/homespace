@@ -10,6 +10,9 @@ import './index.css'
 import { Login } from './pages/login';
 import { Landing } from './pages/Landing';
 import { Alist } from './pages/alisting';
+import { See } from './pages/See';
+import { GallaryView } from './pages/Gallaryview';
+import { Upload } from './pages/upload';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/landing' element={<Landing />} />
         <Route path='/alist' element={<Alist />} />
+        <Route path='/see' element={<See />} />
+        <Route path='/gallary' element={<GallaryView />} />
+        <Route path='/upload' element={<Upload />} />
       </Routes>
     </Router>
     </>
