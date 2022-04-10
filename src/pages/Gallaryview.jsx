@@ -28,7 +28,7 @@ export const GallaryView = () => {
 
                     <input className='ml-2 border-2 border-black px-2 rounded-md' size="15" type="text" placeholder="search by location"/>
                    
-                    {/* The about input field should have a drop down menu to select inputs from
+                    {/*FIXME: The above input field should have a drop down menu to select inputs from
                     and can't accept any random input, it is a controlled input field.*/}
 
                     <h3 className='my-1 font-semibold'>Price</h3>

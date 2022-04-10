@@ -13,8 +13,10 @@ import { Alist } from './pages/alisting';
 import { See } from './pages/See';
 import { GallaryView } from './pages/Gallaryview';
 import { Upload } from './pages/upload';
+import { Dash } from './pages/dashboard';
 
 function App() {
+
   return (
     <>
     <Router>
@@ -27,6 +29,7 @@ function App() {
         <Route path='/see' element={<See />} />
         <Route path='/gallary' element={<GallaryView />} />
         <Route path='/upload' element={<Upload />} />
+        <Route path='/dashboard' element={<Dash />} />
       </Routes>
     </Router>
     </>
