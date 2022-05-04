@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import React, { useState } from "react";
 import { MdSettings, MdNotifications, MdSearch } from 'react-icons/md'
 import { Chatlist } from "../components/chatList";
@@ -11,6 +12,44 @@ export const Dash = () => {
     const kebabclose = (e) => {
         console.log(e)
     }
+
+    data = [
+        {
+        projectName: 'Adminto Admine V1',
+        startDate: '01/01/2017',
+        dueDate: '01/01/2017',
+        Status: "Released",
+        Assign: 'Coderthems'
+    },
+        {
+        projectName: 'Adminto Admine V1',
+        startDate: '01/01/2017',
+        dueDate: '01/01/2017',
+        Status: "Released",
+        Assign: 'Coderthems'
+    },
+        {
+        projectName: 'Adminto Admine V1',
+        startDate: '01/01/2017',
+        dueDate: '01/01/2017',
+        Status: "Released",
+        Assign: 'Coderthems'
+    },
+        {
+        projectName: 'Adminto Admine V1',
+        startDate: '01/01/2017',
+        dueDate: '01/01/2017',
+        Status: "Released",
+        Assign: 'Coderthems'
+    },
+        {
+        projectName: 'Adminto Admine V1',
+        startDate: '01/01/2017',
+        dueDate: '01/01/2017',
+        Status: "Released",
+        Assign: 'Coderthems'
+    },
+]
 
     return(
         <div onClick={kebabclose} className="flex bg-blue-50">
@@ -55,9 +94,14 @@ export const Dash = () => {
 
 
                 <div>
-
+                    <div className="flex">
+                        <div>#</div>
+                        {data[0].map(ele => {
+                            return <div>ele</div>
+                        })}
+                    </div>
                     <Paper close={click} name="Latest Projects" options={['Actions', 'Another action', 'Something else', 'Separated link']}>
-                        <TableRow />
+                        <TableRow data={data[0]}/>
                     </Paper>                    
                 </div>
 
